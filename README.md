@@ -20,5 +20,5 @@ Welcome to the Trendline Shop project! This is an e-commerce web application des
 
 ## Getting Started
 
-To run the Trendline Shop project locally, follow the links:
+To run the Trendline Shop project locally, follow the links:https://srv2k21codex.github.io/Trendline-shop/
 
