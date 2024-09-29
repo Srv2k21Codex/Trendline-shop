@@ -1,0 +1,222 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+#main{
+    height:100%;
+    width:100%;
+    /* background-color:antiquewhite; */
+}
+#nav{
+    /* background-color:red; */
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    transition: background-color 0.3s ease;
+    
+}
+#left-nav{
+    display:flex;
+    padding:0 20px;
+}
+#right-nav{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:0 10px;
+    
+}
+#right-nav span{
+    color:rgb(138, 138, 139);
+    font-size:0.9vw;
+}
+#right-nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 0 10px;
+}
+
+#right-nav h4 {
+    font-size: 0.9vw;
+    font-weight: 500; 
+    color: #202020;      
+    position: relative; /* To position the pseudo-element */
+    transition: color 0.3s ease; /* Smooth color transition */
+    padding: 8px 12px; /* Padding for the box effect */
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+#right-nav h4:hover {
+    color: orangered; /* Change text color on hover */
+    transform: scale(1.1);
+
+}
+
+#right-nav h4:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 69, 0, 0.1); /* Light background color for hover effect */
+    border-radius: 4px; /* Match the border radius */
+    z-index: -1; /* Place it behind the text */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+
+.elem{
+    height:16px;
+    width:16px;
+    background-color:black;
+    border-radius:50%;
+}
+#nav-menu{
+    width:100vw;
+    height:4vw;
+    /* background-color:red; */
+    display:flex;
+    align-items:center;
+    gap:60px;
+    padding:0 20px;
+    margin-top:-14px;   
+}
+#nav-menu h3{
+    font-size:0.8vw;
+    font-weight:600;
+    color:#807d7d;
+    text-transform: uppercase;
+}
+
+#nav-menu h3:hover {
+    color: orangered; /* Change color on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+#main-content{
+    width:100%;
+    height: calc(100% - (50px + 4vw + 40px));
+    /* background-color:aquamarine; */
+    
+}
+#main-content-first{
+    height:30%;
+    width:100%;
+    /* background-color:burlywood; */
+    display:flex;
+    align-items:center;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin-top:40px;
+}
+#img-content{
+    height:70%;
+    width:100%;
+    display:flex;
+    overflow-x:auto;
+}
+#img1{
+    flex-shrink:0;
+    width:100%;
+    height:100%;
+    /* background-color:red; */
+    background-image:url(https://cdn.pixabay.com/photo/2024/04/21/07/17/ai-generated-8710001_960_720.jpg);
+    background-image:cover;
+    background-position:right;
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+#img2{
+    flex-shrink:0;
+    width:100%;
+    height:100%;
+    background-image:url(https://cdn.pixabay.com/photo/2020/09/01/18/45/woman-5536080_960_720.jpg);
+    background-position:0 55%;
+    background-image:cover;
+    background-repeat:no-repeat;
+    background-size:cover;
+    
+}
+#img3{
+    flex-shrink:0;
+    width:100%;
+    height:100%;
+    background-image:url(https://cdn.pixabay.com/photo/2024/08/16/12/32/ai-generated-8973623_1280.jpg);
+    background-position:0 20%;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+#img4{
+    flex-shrink:0;
+    width:100%;
+    height:100%;
+    /* background-color:rgb(21, 174, 185); */
+    background-image:url(https://cdn.pixabay.com/photo/2024/07/24/03/49/ai-generated-8916875_640.png);
+    background-repeat:no-repeat;
+    background-position: 0 33%;
+    background-size:cover;
+    object-fit:cover;
+}
+#img-content::-webkit-scrollbar{
+    display:none;
+}
+#main-content img{
+    flex-shrink:0;
+}
+#main-content-first::-webkit-scrollbar{
+    background-color: transparent;
+    height:4px;
+}
+#main-content-first::-webkit-scrollbar-thumb{
+    background-color:orangered;
+}
+
+.text-scroll{
+  flex-shrink:0;
+  height:100%;
+  width:70%;
+  /* background-color:red; */
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
+  
+}
+.text-scroll h1{
+  font-size:90px;
+  font-weight:500;
+}
+
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust the height of the jump */
+    }
+}
+
+.text-scroll h1 {
+    font-size: 80px;
+    font-weight: 500;
+    animation: float 2s ease-in-out infinite; /* Animation effect */
+}
+
+/* Optional hover effect */
+.text-scroll h1:hover {
+    color: orangered; /* Change color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    font-size:100px;
+}
